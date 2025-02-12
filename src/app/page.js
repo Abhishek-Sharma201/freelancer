@@ -36,7 +36,7 @@ const Page = () => {
 
       {isAuthenticated ? (
         <button
-          className="rounded-md border border-zinc-700 hover:bg-zinc-800 text-[.8rem] px-4 py-2 bg-zinc-900"
+          className="rounded-md border border-zinc-700 hover:bg-zinc-800 text-[.8rem] px-4 py-2 bg-zinc-900 text-white"
           onClick={handleLogout}
         >
           Logout
