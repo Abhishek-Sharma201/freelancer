@@ -121,11 +121,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      {/* <section id="portfolio" className="py-20 text-center bg-gray-200">
-        <h2 className="text-3xl font-bold mb-6">Our Work</h2>
-        <p className="text-lg">Showcasing top projects from our freelancers.</p>
-      </section> */}
       <div className='flex flex-wrap justify-center gap-4 bg-black '>
 
        {jobCategories.map((index, key) => (
