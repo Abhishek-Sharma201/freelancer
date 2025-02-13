@@ -101,7 +101,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-gray-900 text-white">
+    <div className="h-screen w-screen flex items-center justify-center bg-gray-900 text-black">
       <Card className="w-[400px] p-6 bg-gray-800 shadow-lg rounded-xl">
         <CardHeader>
           <CardTitle className="text-center text-xl font-semibold text-white">Create an Account</CardTitle>
@@ -112,7 +112,7 @@ const SignupPage = () => {
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="text-white"
+            className="text-black"
           />
           <Input
             type="email"

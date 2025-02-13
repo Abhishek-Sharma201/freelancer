@@ -1,5 +1,41 @@
+import { CardBody, CardContainer, CardItem } from '@/components/3d-card';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
+
+
+const jobCategories = [
+  {
+    id: 0,
+    title: "Development",
+    description: "Frontend, backend, web, and app developer jobs",
+    icon: "https://cdn-icons-png.flaticon.com/128/3573/3573187.png"
+  },
+  {
+    id: 1,
+    title: "Marketing & Sales",
+    description: "Advertising, digital marketing and brand..",
+    icon: "https://cdn-icons-png.flaticon.com/128/16877/16877308.png"
+  },
+  {
+    id: 2,
+    title: "Design & Creative",
+    description: "Graphic, digital, web, and UI/UX designer jobs",
+    icon: "https://cdn-icons-png.flaticon.com/128/1014/1014347.png"
+  },
+  {
+    id: 3,
+    title: "Customer Services",
+    description: "Customer experiences and account management jobs.",
+    icon: "https://cdn-icons-png.flaticon.com/128/1067/1067566.png"
+  },
+  {
+    id: 4,
+    title: "Manager",
+    description: "Social media, accounting, data analytics..",
+    icon: "https://cdn-icons-png.flaticon.com/128/1570/1570102.png"
+  }
+];
 
 
 export default function Home() {
@@ -81,8 +117,8 @@ export default function Home() {
 
         {/* 2row */}
 
-        <div className="mt-7 grid grid-cols-1 md:grid-cols-5 gap-6 max-w-6xl mx-auto ">
-          <div className="p-6 bg-green-100 rounded-lg shadow-md flex flex-col items-center text-center">
+        {/* <div className="mt-7 grid grid-cols-1 md:grid-cols-5 gap-6 max-w-6xl mx-auto ">
+          <div className="p-6 bg-green-100 rounded-lg shadow-md flex flex-col items-center text-center ">
             <img src="https://cdn-icons-png.flaticon.com/128/3573/3573187.png" alt="" className="w-10 h-10 " />
             <h3 className="text-lg font-semibold mt-4">Development</h3>
             <p className="text-gray-700 text-sm mt-5">Frontend, backend, web, and app developer jobs</p>
@@ -108,20 +144,68 @@ export default function Home() {
             <p className="text-gray-700 text-sm mt-5">Social media, accounting, data analytics..</p>
           </div>
           
-        </div>
+        </div> */}
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 text-center bg-gray-200">
+      {/* <section id="portfolio" className="py-20 text-center bg-gray-200">
         <h2 className="text-3xl font-bold mb-6">Our Work</h2>
         <p className="text-lg">Showcasing top projects from our freelancers.</p>
-      </section>
+      </section> */}
+       <div className='flex flex-wrap justify-center gap-4'>
 
+       {jobCategories.map((index,key) => (
+         <CardContainer className="inter-var" key={key}>
+         <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+           <CardItem
+             translateZ="50"
+             className="text-xl font-bold text-neutral-600 dark:text-white"
+           >
+             {index.title}
+           </CardItem>
+           <CardItem
+             as="p"
+             translateZ="60"
+             className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+             >
+             {index.description}
+           </CardItem>
+           <CardItem translateZ="100" className="w-full mt-4">
+             <Image
+               src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+               height="1000"
+               width="1000"
+               className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+               alt="thumbnail"
+               />
+           </CardItem>
+           <div className="flex justify-between items-center mt-20">
+             <CardItem
+               translateZ={20}
+               as={Link}
+               href="https://twitter.com/mannupaaji"
+               target="__blank"
+               className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+             >
+               Try now →
+             </CardItem>
+             <CardItem
+               translateZ={20}
+               as="button"
+               className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+               >
+               Sign up
+             </CardItem>
+           </div>
+         </CardBody>
+       </CardContainer>
+  ))}
+  </div>
       {/* Contact Section */}
       <section id="contact" className="bg-gray-900 text-white py-16 text-center">
-        <h2 className="text-3xl font-bold">Get in Touch</h2>
-        <p className="mt-4">Let's discuss your next project.</p>
-        <button className="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition-all">Contact Us</button>
+    
+        <p className="mt-4">@2025FreelancerHub</p>
+      
       </section>
     </div>
   );
