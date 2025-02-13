@@ -45,22 +45,22 @@ const jobCategories = [
 
 export default function Home() {
   return (
-    <div className="bg-white text-gray-900 ">
+    <div className="bg-green-200 text-gray-900 ">
       <Head>
         <title>Freelancer Website</title>
         <meta name="description" content="Find top freelance services with ease" />
       </Head>
 
       {/* Navbar */}
-      <nav className="flex justify-between items-center p-6 bg-gradient-to-r from-black to-slate-600 drop-shadow-xl rounded-b-lg font-bold h-14 sticky top-0 z-50">
+      <nav className="flex justify-between items-center p-6 bg-gradient-to-r from-black to-gray-700 drop-shadow-xl rounded-b-lg font-bold h-14 sticky top-0 z-50 shadow-2xl">
         <h1 className="text-2xl font-bold text-green-300">FreelanceHub</h1>
         <div className=' text-green-300'>
           <a href="#services" className="px-4 hover:text-green-600 ">Services</a>
           <a href="#contact" className="px-4 hover:text-green-600 ">Contact</a>
           <a href="#About_us" className="px-4 hover:text-green-600 ">About Us</a>
         </div>
-        <button className='text-l rounded-3xl cursor-pointer bg-green-700 h-10 w-20 text-white hover:bg-green-800 transition-all'>
-          <a href='/signup'>Sign In</a>
+        <button className='text-l rounded-3xl cursor-pointer bg-green-700 h-10 w-40 text-white hover:bg-green-800 transition-all'>
+          <a href='/signup'>Sign In / Log In</a>
         </button>
       </nav>
 
