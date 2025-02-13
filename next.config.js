@@ -2,7 +2,8 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-      domains: ['images.unsplash.com'], // Add allowed image domains here
+      domains: ['images.unsplash.com', 'cdn-icons-png.flaticon.com','images.pexels.com'],
+        // Add allowed image domains here
     },
   };
   
