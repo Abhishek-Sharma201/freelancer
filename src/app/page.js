@@ -1,10 +1,15 @@
+
 import { CardBody, CardContainer, CardItem } from '@/components/3d-card';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
 
+
 const jobCategories = [
+
+
+
   {
     id: 0,
     title: "Development",
@@ -43,8 +48,10 @@ const jobCategories = [
 ];
 
 
+
 export default function Home() {
   return (
+
     <div className="bg-green-200 text-gray-900 ">
       <Head>
         <title>Freelancer Website</title>
@@ -68,7 +75,7 @@ export default function Home() {
 
       <section className="min-h-screen flex flex-col md:flex-row justify-center items-start text-left bg-green-200 text-white p-6">
         <div className="w-full max-w-2xl mt-24">
-          <h1 className="text-5xl font-bold text-black">Got Talent? Meet Opportunity</h1>
+          <h1 className=" text-5xl font-bold text-black">Got Talent? Meet Opportunity</h1>
           <p className="text-xl mt-4 text-black font-semibold">Find top talent for your projects instantly.</p>
           <p className="text-l mt-1 text-black font-semibold">Company reviews, Salaries, Interviews, Jobs.</p>
 
@@ -123,7 +130,7 @@ export default function Home() {
 
       <div className='flex flex-wrap justify-center gap-4 bg-black '>
 
-       {jobCategories.map((index, key) => (
+        {jobCategories.map((index, key) => (
           <CardContainer className="inter-var" key={key}>
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
               <CardItem
@@ -149,7 +156,7 @@ export default function Home() {
                 />
               </CardItem>
               <div className="flex justify-between items-center mt-20">
-           
+
                 <CardItem
                   translateZ={20}
                   as="button"
@@ -160,7 +167,7 @@ export default function Home() {
               </div>
             </CardBody>
           </CardContainer>
-        ))} 
+        ))}
       </div>
       {/* Contact Section */}
       <section id="contact" className="bg-gray-900 text-white py-16 text-center">

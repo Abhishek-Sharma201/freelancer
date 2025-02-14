@@ -101,12 +101,14 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-gray-900 text-black ">
-      <Card className="w-[400px] p-6 bg-gray-800 shadow-lg rounded-xl">
+    <div className="h-screen w-screen flex items-center justify-center bg-gray-900 text-black  ">
+      <Card className="w-[400px] p-6 bg-gray-800 shadow-lg rounded-xl ">
         <CardHeader>
           <CardTitle className="text-center text-xl font-semibold text-white">Create an Account</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col gap-4">
+        <CardContent className="flex flex-col gap-4 ">
+
+
           <Input
             type="text"
             placeholder="Name"
@@ -137,6 +139,7 @@ const SignupPage = () => {
               Login
             </Link>
           </p>
+
         </CardContent>
       </Card>
     </div>
