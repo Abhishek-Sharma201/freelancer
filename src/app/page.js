@@ -3,7 +3,7 @@ import { CardBody, CardContainer, CardItem } from '@/components/3d-card';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import RootLayout from './layout';
 
 
 const jobCategories = [
